@@ -66,7 +66,7 @@
       /> -->
     </div>
     <a
-      href="https://blog.nephera.top/"
+      href="https://github.com/NEPHERAovo"
       class="fixed bottom-[6px] left-1/2 ml-[-40px] cursor-pointer hover:text-[#F8E9DB] text-footer-color font-mono text-lg tracking-wider"
       >NEPHERA</a
     >
