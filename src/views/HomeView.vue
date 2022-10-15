@@ -1,5 +1,11 @@
 <template>
   <div>
+    <div
+      @click="jumpTo"
+      class="absolute top-[8vh] left-[48.6vw] cursor-pointer hover:text-footer-color text-[#F8E9DB] font-mono text-lg tracking-wider"
+    >
+      MY BLOG
+    </div>
     <img
       class="absolute top-[2vh] w-[188px] h-[55px] ml-[-94px] left-1/2"
       src="/logo.png"
