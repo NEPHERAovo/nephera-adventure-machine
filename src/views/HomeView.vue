@@ -102,13 +102,6 @@ var interval = 4363.6; // ms
 var expected = Date.now() + interval;
 setTimeout(step, interval);
 function step() {
-  var dt = Date.now() - expected; // the drift (positive for overshooting)
-  if (playing.length > 0) {
-    for (let i of playing) {
-      audios[i].currentTime = 0;
-      audios[i].play();
-    }
-  }
   while (needToPlay.length > 0) {
     let temp = needToPlay[0] + 1;
     let button: HTMLElement | null = document.getElementById(temp.toString());
@@ -124,16 +117,25 @@ function step() {
         button.classList.add("bg-red-active");
       }
     }
-    audios[needToPlay[0]].play();
+    // audios[needToPlay[0]].play();
     playing.push(needToPlay[0]);
     needToPlay.shift();
   }
+  if (playing.length > 0) {
+    for (let i of playing) {
+      audios[i].currentTime = 0;
+      audios[i].play();
+    }
+  }
+  var dt = Date.now() - expected; // the drift (positive for overshooting)
   expected += interval;
   setTimeout(step, Math.max(0, interval - dt)); // take into account drift
 }
+
 const jumpTo = () => {
   window.open("https://blog.nephera.top/", "_blank");
 };
+
 const clickButton = (id: number) => {
   let button: HTMLElement | null = document.getElementById(id.toString());
   id = id - 1;
