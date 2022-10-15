@@ -3,6 +3,7 @@
     <img
       class="absolute top-[2vh] w-[188px] h-[55px] ml-[-94px] left-1/2"
       src="/logo.png"
+      @click="jumpTo"
     />
     <div class="flex justify-center items-center text-center">
       <img
@@ -65,7 +66,7 @@
       /> -->
     </div>
     <a
-      href="https://github.com/NEPHERAovo"
+      href="https://blog.nephera.top/"
       class="fixed bottom-[6px] left-1/2 ml-[-40px] cursor-pointer hover:text-[#F8E9DB] text-footer-color font-mono text-lg tracking-wider"
       >NEPHERA</a
     >
@@ -124,6 +125,9 @@ function step() {
   expected += interval;
   setTimeout(step, Math.max(0, interval - dt)); // take into account drift
 }
+const jumpTo = () => {
+  window.open("https://blog.nephera.top/", "_blank");
+};
 const clickButton = (id: number) => {
   let button: HTMLElement | null = document.getElementById(id.toString());
   id = id - 1;
