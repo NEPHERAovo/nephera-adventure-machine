@@ -1,11 +1,5 @@
 <template>
   <div>
-    <div
-      @click="jumpTo"
-      class="absolute top-[8vh] left-[48.6vw] cursor-pointer hover:text-footer-color text-[#F8E9DB] font-mono text-lg tracking-wider"
-    >
-      MY BLOG
-    </div>
     <img
       class="absolute top-[2vh] w-[188px] h-[55px] ml-[-94px] left-1/2"
       src="/logo.png"
@@ -73,9 +67,15 @@
     </div>
     <a
       href="https://github.com/NEPHERAovo"
-      class="fixed bottom-[6px] left-1/2 ml-[-40px] cursor-pointer hover:text-[#F8E9DB] text-footer-color font-mono text-lg tracking-wider"
+      class="fixed bottom-[6px] left-1/2 ml-[-120px] cursor-pointer hover:text-[#F8E9DB] text-footer-color font-mono text-lg tracking-wider"
       >NEPHERA</a
     >
+    <div
+      @click="jumpTo"
+      class="absolute bottom-[6px] left-1/2 ml-[80px] cursor-pointer hover:text-footer-color text-[#F8E9DB] font-mono text-lg tracking-wider"
+    >
+      MY BLOG
+    </div>
   </div>
 </template>
 
